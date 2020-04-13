@@ -121,7 +121,7 @@ function Select-Item {
     do {
         try {
             [int]$choice = Read-Host 'Please enter index of the desired item (<Enter> = 0 = cancel)'  -ErrorAction Stop
-            Write-Verbose "Select-ItemFromThreeColumnsList `$choice: $choice"
+            Write-Verbose "Select-Item `$choice: $choice"
         }
         catch {
             Write-Warning "Incorrect input! Please choose a numeric value between '0' and '$($itemList.Length )'!"
@@ -134,7 +134,7 @@ function Select-Item {
     else {
         $selectedItem = $itemList[$choice - 1 ] 
     }
-    Write-Verbose "Select-ItemFromThreeColumnsList `$selectedItem: $selectedItem"
+    Write-Verbose "Select-Item `$selectedItem: $selectedItem"
 
     return $selectedItem
 }
